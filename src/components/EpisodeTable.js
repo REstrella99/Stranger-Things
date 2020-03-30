@@ -1,25 +1,16 @@
-import React from "react";
-import { render } from "react-dom";
-import Datasort from "react-data-sort";
-import tableData from "../data/en_US.json";
-import tableDataPG from "../data/la_PG.json";
+import React from 'react';
+import { render } from 'react-dom';
+import Datasort from 'react-data-sort';
 
-
-function MyTable() {
+function MyTable(props) {
 	return (
 		<Datasort
-			data={tableData['episode-list']}
-			defaultSortBy="id"
-			render={({
-				data,
-				setSortBy,
-				sortBy,
-				direction,
-				toggleDirection
-			}) => {
+			data={props.data['episode-list']}
+			defaultSortBy='id'
+			render={({ data, setSortBy, sortBy, direction, toggleDirection }) => {
 				return (
 					<div style={{ maxWidth: 500 }}>
-						<table border={1} cellPadding={1} style={{ width: '100%' }}>
+						<table border={1} cellPadding={5} style={{ width: '100%' }}>
 							<TableHead
 								setSortBy={setSortBy}
 								sortBy={sortBy}
@@ -28,8 +19,7 @@ function MyTable() {
 							/>
 							<TableBody data={data} />
 						</table>
-						<Flex style={{ justifyContent: 'center' }}>
-						</Flex>
+						<Flex style={{ justifyContent: 'center' }}></Flex>
 					</div>
 				);
 			}}
@@ -37,13 +27,11 @@ function MyTable() {
 	);
 }
 
-
-
 function TableHead({ setSortBy, sortBy, direction, toggleDirection }) {
 	const columns = [
-		{ key: "name", title: "Name" },
-		{ key: "season", title: "Season" },
-		{ key: "rating", title: "Rating" }
+		{ key: 'name', title: 'Name' },
+		{ key: 'season', title: 'Season' },
+		{ key: 'rating', title: 'Rating' }
 	];
 	const items = columns.map(({ key, title }) => {
 		const active = key === sortBy;
@@ -58,13 +46,13 @@ function TableHead({ setSortBy, sortBy, direction, toggleDirection }) {
 					setSortBy(key);
 				}}
 			>
-				{title} {active ? direction === "asc" ? "▲" : "▼" : null}
+				{title} {active ? (direction === 'asc' ? '▲' : '▼') : null}
 			</HeadToggle>
 		);
 	});
 	return (
 		<thead>
-
+			<p>Episodes</p>
 			<tr>{items}</tr>
 		</thead>
 	);
@@ -74,7 +62,7 @@ function HeadToggle({ children, active, onClick }) {
 	return (
 		<td
 			onClick={onClick}
-			style={{ fontWeight: active ? "bold" : "normal", cursor: "pointer" }}
+			style={{ fontWeight: active ? 'bold' : 'normal', cursor: 'pointer' }}
 		>
 			{children}
 		</td>
@@ -89,34 +77,25 @@ function TableBody({ data }) {
 					<td>{name}</td>
 					<td>{season}</td>
 					<td>{rating}</td>
-
 				</tr>
-
-
-
 			))}
-
 		</tbody>
-
-
 	);
 }
 
 function Flex({ children, style }) {
-	return <div style={{ display: "flex", ...style }}>{children}</div>;
+	return <div style={{ display: 'flex', ...style }}>{children}</div>;
 }
 
+const EpisodeTable = props => {
+	console.log('~~~~~~~ EpisodeTable', props.data);
+	return (
+		<div>
+			<MyTable data={props.data} />
+		</div>
+	);
+};
 
-const EpisodeTable = () => (
-	<div>
-		<MyTable />
-	</div>
-);
-
-
-render(<EpisodeTable />, document.getElementById("root"));
-
-
+// render(<EpisodeTable />, document.getElementById('root'));
 
 export default EpisodeTable;
-

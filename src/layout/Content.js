@@ -5,12 +5,20 @@ import Gallery from '../pages/Gallery';
 import Episodes from '../pages/Episodes';
 
 
-
-const Content = () => (
+const Content = props => (
 	<Switch>
-		<Route exact path="/" component={Overview} />
-		<Route exact path="/Gallery" component={Gallery} />
-		<Route exact path="/Episodes" component={Episodes} />
+		<Route exact path='/' component={() => <Overview data={props.data} />} />
+		<Route
+			exact
+			path='/Gallery'
+			component={() => <Gallery data={props.data} />}
+		/>
+		<Route
+			exact
+			path='/Episodes'
+			component={() => <Episodes data={props.data} />}
+		/>
+
 	</Switch>
 );
 

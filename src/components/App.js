@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 const Hello = React.createClass({
   render() {
-    return(
+    return (
       <h1>Hello, {this.props.name}!</h1>
     )
   }

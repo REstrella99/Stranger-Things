@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import data from "../data/en_US.json";
-
 import img2 from "../images/strangerthings2.JPG"
 import img3 from "../images/mindflayer.gif"
 
@@ -10,18 +9,18 @@ import img3 from "../images/mindflayer.gif"
 class Pictures extends Component {
     render() {
         return (
-            <Carousel autoPlay>
+            <Carousel>
                 <div>
-                    <img src={data.gallery[0].src} />
-                    <h3>{data.gallery[0].text}</h3>
+                    <img src={this.props.data.gallery[0].src} />
+                    <p className='legend'>{this.props.data.gallery[0].text}</p>
                 </div>
                 <div>
-                    <img src={data.gallery[1].src} />
-                    <h3>{data.gallery[1].text}</h3>
+                    <img src={this.props.data.gallery[1].src} />
+                    <p className='legend'>{this.props.data.gallery[1].text}</p>
                 </div>
                 <div>
-                    <img src={data.gallery[2].src} />
-                    <h3>{data.gallery[2].text}</h3>
+                    <img src={this.props.data.gallery[2].src} />
+                    <p className='legend'>{this.props.data.gallery[2].text}</p>
                 </div>
                 <div>
                     <img src={img2} />
@@ -34,6 +33,8 @@ class Pictures extends Component {
             </Carousel>
         );
     }
-};
+}
+
+
 
 export default Pictures;

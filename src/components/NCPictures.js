@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import data from "../data/en_US.json";
 import NCimg1 from '../images/durhambulls.jpg';
 import NCimg2 from '../images/orangecounty.jpg';
 import NCimg3 from '../images/lochnora.jpg';

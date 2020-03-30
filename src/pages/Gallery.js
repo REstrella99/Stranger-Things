@@ -6,7 +6,7 @@ import Pictures from '../components/Pictures';
 
 
 
-const Gallery = () => (
+const Gallery = props => (
     <div>
         <Section backgroundColor='rgb(255,40,0)'>
             <Grid>
@@ -19,7 +19,7 @@ const Gallery = () => (
 
                 <Row center="xs">
                     <Col xs={12} lg={12}>
-                        <Pictures />
+                        <Pictures data={props.data} />
                     </Col>
                 </Row>
 

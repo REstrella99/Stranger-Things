@@ -6,14 +6,14 @@ import Video from "../components/Video";
 import Videotwo from "../components/Videotwo";
 
 
-const Episodes = () => (
+const Episodes = props => (
 
     <div>
         <Section backgroundColor="#e0ebe8">
             <Grid>
                 <Row center="xs">
                     <Col xs={12} lg={6}>
-                        <EpisodeTable />
+                        <EpisodeTable data={props.data} />
                     </Col>
                     <Col xs={12} lg={6}>
                         <Video />
