@@ -19,7 +19,7 @@ function MyTable() {
 			}) => {
 				return (
 					<div style={{ maxWidth: 500 }}>
-						<table border={1} cellPadding={5} style={{ width: '600px' }}>
+						<table border={1} cellPadding={1} style={{ width: '100%' }}>
 							<TableHead
 								setSortBy={setSortBy}
 								sortBy={sortBy}
@@ -64,7 +64,7 @@ function TableHead({ setSortBy, sortBy, direction, toggleDirection }) {
 	});
 	return (
 		<thead>
-			<p>Episodes</p>
+
 			<tr>{items}</tr>
 		</thead>
 	);

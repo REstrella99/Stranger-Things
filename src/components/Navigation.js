@@ -18,9 +18,6 @@ class Navigation extends Component {
 				<ListItem inline>
 					<NavLink to="/Episodes">Episodes</NavLink>
 				</ListItem>
-				<ListItem inline>
-					<NavLink to="/Cast">Cast</NavLink>
-				</ListItem>
 			</List>
 		);
 	}

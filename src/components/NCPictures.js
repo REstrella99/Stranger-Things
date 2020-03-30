@@ -14,30 +14,30 @@ import NCimg6 from '../images/enoriver.jpg';
 class NCPictures extends Component {
     render() {
         return (
-            <Carousel>
+            <Carousel >
                 <div>
                     <img src={NCimg1} />
-                    <p className="legend">Durham Bulls Stadium, Go Bulls!</p>
+                    <h3>Durham Bulls Stadium, Go Bulls!</h3>
                 </div>
                 <div>
                     <img src={NCimg2} />
-                    <p className="legend">Orange County</p>
+                    <h3>Orange County</h3>
                 </div>
                 <div>
                     <img src={NCimg3} />
-                    <p className="legend">Lochn Ora</p>
+                    <h3>Lochn Ora</h3>
                 </div>
                 <div>
                     <img src={NCimg4} />
-                    <p className="legend">Jordan Lake</p>
+                    <h3>Jordan Lake</h3>
                 </div>
                 <div>
                     <img src={NCimg5} />
-                    <p className="legend">Forest Hills Park</p>
+                    <h3>Forest Hills Park</h3>
                 </div>
                 <div>
                     <img src={NCimg6} />
-                    <p className="legend">Eno River</p>
+                    <h3>Eno River</h3>
                 </div>
             </Carousel>
         );

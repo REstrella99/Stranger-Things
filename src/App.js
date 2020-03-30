@@ -12,9 +12,9 @@ class App extends Component {
 			<React.Fragment>
 				<Header>
 					<Grid>
-						<Row middle="xs" center="xs" start="lg">
+						<Row center="xs" start="lg">
 							<Col xs={12} lg={8}>
-								<Img sizeX="102px" />
+
 							</Col>
 							<Col xs={12} lg={4}>
 								<Navigation />
