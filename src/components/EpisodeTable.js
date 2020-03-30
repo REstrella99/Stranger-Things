@@ -8,7 +8,7 @@ import tableDataPG from "../data/la_PG.json";
 function MyTable() {
 	return (
 		<Datasort
-			data={tableData.episodelist}
+			data={tableData['episode-list']}
 			defaultSortBy="id"
 			render={({
 				data,
@@ -19,7 +19,7 @@ function MyTable() {
 			}) => {
 				return (
 					<div style={{ maxWidth: 500 }}>
-						<table border={1} cellPadding={5} style={{ width: '100%' }}>
+						<table border={1} cellPadding={5} style={{ width: '1000px' }}>
 							<TableHead
 								setSortBy={setSortBy}
 								sortBy={sortBy}

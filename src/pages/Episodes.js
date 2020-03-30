@@ -18,9 +18,7 @@ const Episodes = () => (
         <Section backgroundColor="#e0ebe8">
             <Grid>
                 <Row center="xs">
-                    <Col xs={12}>
-                        <Title color="#4ab19a"></Title>
-
+                    <Col xs={12} lg={6}>
                         <EpisodeTable />
                     </Col>
                 </Row>

@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 const SubTitle = styled.h2`
-	color: ${(props) => props.color};
-	font-size: 180%;
-	font-weight: 400;
+	color: white;
+	font-size: 200%;
+	font-weight: 100;
 	font-family:itc-benguiat, serif;
 `;
 

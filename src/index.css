@@ -12,7 +12,14 @@ h2 {
   margin-bottom: 150px;
 }
 
+.legend{
+	font-size: 50px;
+	font-family: itc-benguiat, serif;
+	font-style: normal;
+	font-weight: 100;
+	color: white;
 
+}
 
 h3 {
   font: 300 70px/1.2 'Merienda One', Helvetica, sans-serif;

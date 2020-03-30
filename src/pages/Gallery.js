@@ -10,15 +10,15 @@ import Divider from '../components/Divider';
 import AudioPlayer from "react-h5-audio-player";
 import EpisodeTable from '../components/EpisodeTable';
 import data from "../data/en_US.json";
-import Picture from '../components/Picture';
+import Pictures from '../components/Pictures';
 
 const Gallery = () => (
     <div>
-        <Section backgroundColor="#e0ebe8">
+        <Section>
             <Grid>
-                <Row bottom="xs" center="xs">
-                    <Col xs={12}>
-                        <Picture />
+                <Row center="xs">
+                    <Col xs={12} lg={8}>
+                        <Pictures />
                     </Col>
                 </Row>
             </Grid>
