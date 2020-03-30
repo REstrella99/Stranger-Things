@@ -19,7 +19,7 @@ function MyTable() {
 			}) => {
 				return (
 					<div style={{ maxWidth: 500 }}>
-						<table border={1} cellPadding={5} style={{ width: '1000px' }}>
+						<table border={1} cellPadding={5} style={{ width: '600px' }}>
 							<TableHead
 								setSortBy={setSortBy}
 								sortBy={sortBy}
